@@ -5,13 +5,17 @@ using UnityEngine.UI;
 
 public class GeneralCodeToggle : MonoBehaviour {
 
-public GameObject SelectedInputField;
+public InputField SelectedInputField;
 public string[] CorrectCode;
 public GameObject[] RelevantInputField;
+	void Start(){
+	SelectedInputField.onEndEdit.AddListener(delegate {
+		ReadCode(); 
+		});
+}
 	
-	// Update is called once per frame
-	void Update () {
-		string TypedCode = SelectedInputField.GetComponent<InputField>().text;
+	void ReadCode(){
+		string TypedCode = SelectedInputField.text;
 		for (int i = 0; i < CorrectCode.Length; i++){
 			if(TypedCode == CorrectCode[i]){
 				ToggleInputField(RelevantInputField[i]);
