@@ -13,14 +13,10 @@ void Start(){
 	SelectedInputField.onEndEdit.AddListener(delegate {ChangeScale(PreferredScale); });
 }
 
-void Update()
-{
-	PreferredScale = float.Parse(SelectedInputField.text);
-	}
-
 	
 void ChangeScale(float scale)
 {
+	PreferredScale = float.Parse(SelectedInputField.text);
 SelectedObject.transform.localScale *= scale;
 }
 }
