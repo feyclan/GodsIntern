@@ -17,6 +17,6 @@ void Start(){
 void ChangeScale(float scale)
 {
 	PreferredScale = float.Parse(SelectedInputField.text);
-SelectedObject.transform.localScale *= scale;
+	SelectedObject.transform.localScale *= scale;
 }
 }
