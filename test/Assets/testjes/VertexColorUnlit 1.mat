@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: VertexColorUnlit 1
-  m_Shader: {fileID: 4800000, guid: f6bc3858d297bd440b0f2069d3bf115f, type: 3}
+  m_Shader: {fileID: 4800000, guid: 7f47add854be75641aa506b7aa45db5f, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
