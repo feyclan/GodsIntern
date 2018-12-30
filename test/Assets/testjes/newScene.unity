@@ -796,7 +796,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1098042050}
-  - component: {fileID: 1098042051}
   - component: {fileID: 1098042052}
   - component: {fileID: 1098042053}
   - component: {fileID: 1098042054}
@@ -820,29 +819,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1098042051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1098042049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdedf088fdba4a243b15df67cc3ff9f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SelectedObject: {fileID: 2078406448}
-  SelectedInputField: {fileID: 625403192}
-  colorcodes:
-  - Blue
-  - Red
-  - Green
-  - Cyan
-  colors:
-  - {r: 0.25943398, g: 0.6931938, b: 1, a: 0}
-  - {r: 1, g: 0.1745283, b: 0.1745283, a: 0}
-  - {r: 0.17647058, g: 1, b: 0.27076355, a: 0}
-  - {r: 0.17647058, g: 1, b: 1, a: 0}
 --- !u!114 &1098042052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,14 +861,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10763d810c6356d489a7af10987a31f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectedObject: {fileID: 2078406448}
+  SelectedObject: {fileID: 2046892380}
   SelectedInputField: {fileID: 625403192}
   colorcodes:
   - blue
   - green
+  - yellow
+  - red
+  - orange
   colors:
-  - {r: 0.6981132, g: 0.44455323, b: 0.44455323, a: 0}
+  - {r: 0, g: 0.54118204, b: 1, a: 0}
+  - {r: 0.3160377, g: 1, b: 0.39185482, a: 0}
+  - {r: 1, g: 0.97351444, b: 0, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 1, g: 0.45290935, b: 0, a: 0}
 --- !u!1 &1190047237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,6 +1507,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1924466589}
   m_CullTransparentMesh: 0
+--- !u!1 &2046892380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1206511787925574, guid: 3b1e3e9155d404942bc65d9aa80120ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 1497720986}
 --- !u!1 &2078406448
 GameObject:
   m_ObjectHideFlags: 0
