@@ -799,6 +799,7 @@ GameObject:
   - component: {fileID: 1098042051}
   - component: {fileID: 1098042052}
   - component: {fileID: 1098042053}
+  - component: {fileID: 1098042054}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -873,6 +874,25 @@ MonoBehaviour:
   RelevantInputField:
   - {fileID: 625403190}
   - {fileID: 1739321900}
+--- !u!114 &1098042054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1098042049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10763d810c6356d489a7af10987a31f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelectedObject: {fileID: 2078406448}
+  SelectedInputField: {fileID: 625403192}
+  colorcodes:
+  - blue
+  - green
+  colors:
+  - {r: 0.6981132, g: 0.44455323, b: 0.44455323, a: 0}
+  - {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &1190047237
 GameObject:
   m_ObjectHideFlags: 0
