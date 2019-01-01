@@ -246,6 +246,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de6abd774f85e18408346a3233418242, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &449308061 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1522729216997060, guid: 32026357c04e0e944835774b42e3c1b7,
+    type: 2}
+  m_PrefabInternal: {fileID: 570605369}
 --- !u!1001 &518152333
 Prefab:
   m_ObjectHideFlags: 0
@@ -497,6 +502,16 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 701996173}
   m_CullTransparentMesh: 0
+--- !u!1 &830152997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1055064919166404, guid: de6abd774f85e18408346a3233418242,
+    type: 2}
+  m_PrefabInternal: {fileID: 226868669}
+--- !u!1 &888073793 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1206511787925574, guid: 3b1e3e9155d404942bc65d9aa80120ba,
+    type: 2}
+  m_PrefabInternal: {fileID: 1276224139}
 --- !u!1 &1016682476
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,10 +919,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectedInputField: {fileID: 1016682478}
   ActivatedInput: {fileID: 701996173}
+  ActivatedInputSelect: {fileID: 701996175}
   CorrectAnimal:
   - cow
+  - chicken
+  - duck
+  - pig
+  - sheep
   RelevantAnimal:
   - {fileID: 1106924594}
+  - {fileID: 888073793}
+  - {fileID: 449308061}
+  - {fileID: 830152997}
+  - {fileID: 2127955849}
+  colorCode:
+  - red
+  - green
+  - blue
+  - yellow
+  - orange
+  colors:
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 0.010703921, g: 1, b: 0, a: 0}
+  - {r: 0, g: 0.49606514, b: 1, a: 0}
+  - {r: 0.92028606, g: 1, b: 0, a: 0}
+  - {r: 1, g: 0.49694997, b: 0, a: 0}
 --- !u!1001 &1276224139
 Prefab:
   m_ObjectHideFlags: 0
@@ -1339,3 +1375,8 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2116835869}
   m_CullTransparentMesh: 0
+--- !u!1 &2127955849 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1965851562501010, guid: e82139b3bae6212439ea1e85ad29678b,
+    type: 2}
+  m_PrefabInternal: {fileID: 518152333}
