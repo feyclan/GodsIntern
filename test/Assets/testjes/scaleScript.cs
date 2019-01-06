@@ -13,10 +13,12 @@ public class scaleScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        SelectedInput.onEndEdit.AddListener(delegate {
+        SelectedInput.onEndEdit.AddListener(delegate
+        {
             float size = float.Parse(SelectedInput.text);
 
-            UpdateScale(size); });
+            UpdateScale(size);
+        });
 
 	}
 	
