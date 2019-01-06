@@ -23,6 +23,6 @@ public class scaleScript : MonoBehaviour {
 	// Update is called once per frame
 	void UpdateScale (float a) {
 
-        SelectedObject.transform.localScale *= a;
+        SelectedObject.transform.localScale += new Vector3(a, a, a);
 	}
 }
