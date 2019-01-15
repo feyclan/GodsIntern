@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ClickObject : MonoBehaviour {
 
-	// Use this for initialization
+    public InputField commandInput;
+    public GameObject commandInput2; 
+    
+    // Use this for initialization
 	void Start () {
 		
 	}
@@ -18,5 +22,6 @@ public class ClickObject : MonoBehaviour {
     private void OnMouseDown()
     {
         Debug.Log("success");
+        commandInput2.SetActive(true);
     }
 }
