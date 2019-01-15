@@ -9,9 +9,12 @@ public class scaleScript : MonoBehaviour {
 
     public GameObject SelectedObject;
     public InputField SelectedInput;
+    float scaleSize = 1;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
+
+        
 
         SelectedInput.onEndEdit.AddListener(delegate {
             float size = float.Parse(SelectedInput.text);
@@ -23,6 +26,11 @@ public class scaleScript : MonoBehaviour {
 	// Update is called once per frame
 	void UpdateScale (float a) {
 
-        SelectedObject.transform.localScale += new Vector3(a, a, a);
+        float b = (a - scaleSize) * 2;
+
+        scaleSize = a;
+        SelectedObject.transform.localScale += new Vector3(b, b, b);
+
+
 	}
 }
