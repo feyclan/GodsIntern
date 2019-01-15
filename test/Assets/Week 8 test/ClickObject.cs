@@ -21,7 +21,17 @@ public class ClickObject : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        Debug.Log("success");
+        //Debug.Log("success");
         commandInput2.SetActive(true);
+        Debug.Log(this.gameObject.name);
+        Testing();
+    }
+
+    void Testing()
+    {
+        float a = this.gameObject.transform.localPosition.x;
+        Debug.Log(a);
+        commandInput2.transform.localPosition += new Vector3(2, 2, 2);
+        //this.gameObject.GetComponent
     }
 }
