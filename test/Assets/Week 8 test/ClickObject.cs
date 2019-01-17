@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ClickObject : MonoBehaviour {
 
     public InputField commandInput;
-    public GameObject commandInput2;
+    public GameObject commandInput2; 
 
 
 
@@ -24,23 +24,19 @@ public class ClickObject : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        //Debug.Log("success");
-        commandInput2.SetActive(true);
-        MoveField();
+        commandInput2.SetActive(true); //inputfield becomes visible
+        MoveField(); //inputfield is moved next to animal
 
-        GameObject g = GameObject.Find("CommandObject"); //the gamecomponent with all the setcolors, etc...
-        GetComponentTest bScript = g.GetComponent<GetComponentTest>(); //get the script from said gamecomponent
+        GameObject commandInput = GameObject.Find("CommandObject"); //the gamecomponent with all the setcolors, etc...
+        CommandScript bScript = commandInput.GetComponent<CommandScript>(); //get the script from said gamecomponent
         bScript.Tester(this.gameObject); //aanpassen
         bScript.Tester();
-        //Tester();
 
-        //GET.COMPONENT<> PROBEREN
     }
 
     void MoveField()
     {
-        Vector3 a = this.gameObject.transform.localPosition;
-        //Debug.Log(a);
+        Vector3 a = this.gameObject.transform.localPosition; //get coordinates of selected animal
         commandInput2.transform.localPosition = new Vector3(a.x + 665 + ((a.x + 385)*23) , -31, 0);
     }
 

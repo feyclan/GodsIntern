@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GetComponentTest : MonoBehaviour {
+public class CommandScript : MonoBehaviour {
 
 
     public InputField commandInput;
