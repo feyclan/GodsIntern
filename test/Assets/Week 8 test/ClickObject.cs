@@ -31,7 +31,10 @@ public class ClickObject : MonoBehaviour {
         //Debug.Log("success");
         commandInput2.SetActive(true);
         MoveField();
-        Tester();
+
+        GetComponentTest bScript = this.gameObject.GetComponent<GetComponentTest>();
+        bScript.Tester();
+        //Tester();
 
         //GET.COMPONENT<> PROBEREN
     }
@@ -52,6 +55,8 @@ public class ClickObject : MonoBehaviour {
         rend.material.SetColor("_Color", i);
 
     }
+
+
 
     void Tester()
     {
