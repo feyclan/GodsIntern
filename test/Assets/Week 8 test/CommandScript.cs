@@ -8,9 +8,6 @@ public class CommandScript : MonoBehaviour {
 
     public InputField commandInput;
 
-    public string[] colors;
-    public Color[] colors2;
-
     GameObject animal;
     // Use this for initialization
     void Start () {
