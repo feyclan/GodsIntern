@@ -643,6 +643,17 @@ MonoBehaviour:
   colors2:
   - {r: 0, g: 0.51428366, b: 1, a: 0}
   - {r: 0.24022818, g: 1, b: 0, a: 0}
+--- !u!114 &393023695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 393023687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f654a0fdc347154a95475bdfc4a527b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &434345413
 Prefab:
   m_ObjectHideFlags: 0
@@ -757,6 +768,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &434345422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 434345414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f654a0fdc347154a95475bdfc4a527b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &501071145
 GameObject:
   m_ObjectHideFlags: 0
