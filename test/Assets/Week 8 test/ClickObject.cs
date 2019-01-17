@@ -32,6 +32,8 @@ public class ClickObject : MonoBehaviour {
         commandInput2.SetActive(true);
         MoveField();
         Tester();
+
+        //GET.COMPONENT<> PROBEREN
     }
 
     void MoveField()
