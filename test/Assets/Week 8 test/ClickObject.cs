@@ -9,10 +9,6 @@ public class ClickObject : MonoBehaviour {
     public InputField commandInput;
     public GameObject commandInput2;
 
-    //public string[] commands;
-
-    public string[] colors;
-    public Color[] colors2;
 
 
     // Use this for initialization
@@ -32,9 +28,9 @@ public class ClickObject : MonoBehaviour {
         commandInput2.SetActive(true);
         MoveField();
 
-        GameObject g = GameObject.Find("TESTOBJECT");
-        GetComponentTest bScript = g.GetComponent<GetComponentTest>();
-        bScript.Tester(this.gameObject);
+        GameObject g = GameObject.Find("CommandObject"); //the gamecomponent with all the setcolors, etc...
+        GetComponentTest bScript = g.GetComponent<GetComponentTest>(); //get the script from said gamecomponent
+        bScript.Tester(this.gameObject); //aanpassen
         bScript.Tester();
         //Tester();
 
