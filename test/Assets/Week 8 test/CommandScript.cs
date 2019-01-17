@@ -23,39 +23,10 @@ public class CommandScript : MonoBehaviour {
 	}
 
 
-    public void Tester(GameObject i)
+    public void Initialize(GameObject i)
     {
-
         animal = i;
-        Debug.Log("success");
-        Debug.Log(i.name);
-        Debug.Log(this.gameObject.name);
+        this.gameObject.GetComponent<GeneralCodeToggle>(); //SECOND INPUT MOET VERPLAATST WORDEN
     }
 
-
-    void ChangeColor(Color i)
-    {
-        Renderer rend = animal.GetComponent<Renderer>();
-        Shader shader1 = Shader.Find("Standard");
-        rend.material.shader = shader1;
-        rend.material.SetColor("_Color", i);
-
-    }
-
-
-
-    public void Tester()
-    {
-        commandInput.onEndEdit.AddListener(delegate
-        {
-            string inputCode = commandInput.text;
-            for (int i = 0; i < colors.Length; i++)
-            {
-                if (inputCode == colors[i])
-                {
-                    ChangeColor(colors2[i]);
-                }
-            }
-        });
-    }
 }

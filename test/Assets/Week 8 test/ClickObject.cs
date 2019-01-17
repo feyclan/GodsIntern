@@ -6,9 +6,7 @@ using UnityEngine.UI;
 
 public class ClickObject : MonoBehaviour {
 
-    public InputField commandInput;
-    public GameObject commandInput2; 
-
+    public GameObject commandInput; 
 
 
     // Use this for initialization
@@ -24,18 +22,18 @@ public class ClickObject : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        commandInput2.SetActive(true); //inputfield becomes visible
+        commandInput.SetActive(true); //inputfield becomes visible
         MoveField(); //inputfield is moved next to animal
 
-        GameObject commandInput = GameObject.Find("CommandObject"); //the gamecomponent with all the setcolors, etc...
-        CommandScript cScript = commandInput.GetComponent<CommandScript>(); //get the script from said gamecomponent
-        cScript.Tester();
+        GameObject commandObject = GameObject.Find("CommandObject"); //the gamecomponent with all the setcolors, etc...
+        CommandScript cScript = commandObject.GetComponent<CommandScript>(); //get the script from said gamecomponent
+        cScript.Initialize(this.gameObject);
 
     }
 
     void MoveField()
     {
         Vector3 a = this.gameObject.transform.localPosition; //get coordinates of selected animal
-        commandInput2.transform.localPosition = new Vector3(a.x + 665 + ((a.x + 385)*23) , -31, 0);
+        commandInput.transform.localPosition = new Vector3(a.x + 665 + ((a.x + 385)*23) , -31, 0);
     }
 }
