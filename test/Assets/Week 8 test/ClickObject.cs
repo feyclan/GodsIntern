@@ -32,7 +32,9 @@ public class ClickObject : MonoBehaviour {
         commandInput2.SetActive(true);
         MoveField();
 
-        GetComponentTest bScript = this.gameObject.GetComponent<GetComponentTest>();
+        GameObject g = GameObject.Find("TESTOBJECT");
+        GetComponentTest bScript = g.GetComponent<GetComponentTest>();
+        bScript.Tester(this.gameObject);
         bScript.Tester();
         //Tester();
 
@@ -46,7 +48,7 @@ public class ClickObject : MonoBehaviour {
         commandInput2.transform.localPosition = new Vector3(a.x + 665 + ((a.x + 385)*23) , -31, 0);
     }
 
-
+    /*
     void ChangeColor(Color i)
     {
         Renderer rend = this.gameObject.GetComponent<Renderer>();
@@ -71,5 +73,5 @@ public class ClickObject : MonoBehaviour {
                 } 
             }
         });
-    }
+    }  */
 }

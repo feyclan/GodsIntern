@@ -1,11 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GetComponentTest : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+
+    public InputField commandInput;
+
+    public string[] colors;
+    public Color[] colors2;
+
+    GameObject animal;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -15,9 +23,39 @@ public class GetComponentTest : MonoBehaviour {
 	}
 
 
+    public void Tester(GameObject i)
+    {
+
+        animal = i;
+        Debug.Log("success");
+        Debug.Log(i.name);
+        Debug.Log(this.gameObject.name);
+    }
+
+
+    void ChangeColor(Color i)
+    {
+        Renderer rend = animal.GetComponent<Renderer>();
+        Shader shader1 = Shader.Find("Standard");
+        rend.material.shader = shader1;
+        rend.material.SetColor("_Color", i);
+
+    }
+
+
+
     public void Tester()
     {
-        Debug.Log("success");
-        Debug.Log(this.gameObject.name);
+        commandInput.onEndEdit.AddListener(delegate
+        {
+            string inputCode = commandInput.text;
+            for (int i = 0; i < colors.Length; i++)
+            {
+                if (inputCode == colors[i])
+                {
+                    ChangeColor(colors2[i]);
+                }
+            }
+        });
     }
 }

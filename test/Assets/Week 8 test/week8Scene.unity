@@ -654,6 +654,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f654a0fdc347154a95475bdfc4a527b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  commandInput: {fileID: 0}
+  colors: []
+  colors2: []
 --- !u!1001 &434345413
 Prefab:
   m_ObjectHideFlags: 0
@@ -779,6 +782,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f654a0fdc347154a95475bdfc4a527b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  commandInput: {fileID: 0}
+  colors: []
+  colors2: []
 --- !u!1 &501071145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,6 +1946,53 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1805070601}
   m_CullTransparentMesh: 0
+--- !u!1 &1807710465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1807710467}
+  - component: {fileID: 1807710466}
+  m_Layer: 0
+  m_Name: TESTOBJECT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1807710466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1807710465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f654a0fdc347154a95475bdfc4a527b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  commandInput: {fileID: 339000047}
+  colors:
+  - red
+  - yellow
+  colors2:
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 0.993973, g: 1, b: 0, a: 0}
+--- !u!4 &1807710467
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1807710465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 428, y: 146, z: -13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1833220816
 GameObject:
   m_ObjectHideFlags: 0
