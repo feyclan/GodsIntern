@@ -28,9 +28,8 @@ public class ClickObject : MonoBehaviour {
         MoveField(); //inputfield is moved next to animal
 
         GameObject commandInput = GameObject.Find("CommandObject"); //the gamecomponent with all the setcolors, etc...
-        CommandScript bScript = commandInput.GetComponent<CommandScript>(); //get the script from said gamecomponent
-        bScript.Tester(this.gameObject); //aanpassen
-        bScript.Tester();
+        CommandScript cScript = commandInput.GetComponent<CommandScript>(); //get the script from said gamecomponent
+        cScript.Tester();
 
     }
 
@@ -39,31 +38,4 @@ public class ClickObject : MonoBehaviour {
         Vector3 a = this.gameObject.transform.localPosition; //get coordinates of selected animal
         commandInput2.transform.localPosition = new Vector3(a.x + 665 + ((a.x + 385)*23) , -31, 0);
     }
-
-    /*
-    void ChangeColor(Color i)
-    {
-        Renderer rend = this.gameObject.GetComponent<Renderer>();
-        Shader shader1 = Shader.Find("Standard");
-        rend.material.shader = shader1;
-        rend.material.SetColor("_Color", i);
-
-    }
-
-
-
-    void Tester()
-    {
-        commandInput.onEndEdit.AddListener(delegate
-        {
-            string inputCode = commandInput.text;
-            for (int i = 0; i < colors.Length; i++)
-            {
-                if (inputCode == colors[i])
-                {
-                    ChangeColor(colors2[i]);
-                } 
-            }
-        });
-    }  */
 }
