@@ -23,7 +23,12 @@ public class CommandScript : MonoBehaviour {
     public void Initialize(GameObject i)
     {
         animal = i;
-        this.gameObject.GetComponent<GeneralCodeToggle>(); //SECOND INPUT MOET VERPLAATST WORDEN
+        this.gameObject.GetComponent<GeneralCodeToggle>();
+    }
+
+    public GameObject GetAnimal()
+    {
+        return animal;
     }
 
 }

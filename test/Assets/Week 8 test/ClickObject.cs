@@ -6,13 +6,17 @@ using UnityEngine.UI;
 
 public class ClickObject : MonoBehaviour {
 
-    public GameObject commandInput; 
-
+    public GameObject commandInput;
+    GameObject commandObject;
+    CommandScript cScript; //get the commandscript
+    GeneralCodeToggle tScript; //get the codetoggle script
 
     // Use this for initialization
-	void Start () {
- 
+    void Start () {
 
+        commandObject = GameObject.Find("CommandObject"); //the gamecomponent with all the setcolors, etc...
+        cScript = commandObject.GetComponent<CommandScript>(); //get the script from said gamecomponent
+        tScript = commandObject.GetComponent<GeneralCodeToggle>();
     }
 	
 	// Update is called once per frame
@@ -22,11 +26,11 @@ public class ClickObject : MonoBehaviour {
 
     private void OnMouseDown()
     {
+        tScript.ToggleInputField(false); //second input goes away when other object is selected
         commandInput.SetActive(true); //inputfield becomes visible
         MoveField(); //inputfield is moved next to animal
 
-        GameObject commandObject = GameObject.Find("CommandObject"); //the gamecomponent with all the setcolors, etc...
-        CommandScript cScript = commandObject.GetComponent<CommandScript>(); //get the script from said gamecomponent
+        
         cScript.Initialize(this.gameObject);
 
     }
