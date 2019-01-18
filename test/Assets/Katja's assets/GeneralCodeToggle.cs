@@ -8,6 +8,8 @@ public class GeneralCodeToggle : MonoBehaviour {
 public InputField SelectedInputField;
 string[] CorrectCode;
 public GameObject RelevantInputField;
+
+    bool scale; //to activate scalescript
     string TypedCode;
 
 	void Start(){
@@ -19,7 +21,8 @@ public GameObject RelevantInputField;
 }
 	
 	void ReadCode(){
-		TypedCode = SelectedInputField.text;
+        scale = false;
+        TypedCode = SelectedInputField.text;
         bool validCode = false;
 		for (int i = 0; i < CorrectCode.Length; i++){
 			if(TypedCode == CorrectCode[i]){
@@ -47,7 +50,8 @@ public GameObject RelevantInputField;
                 //naar setColor script
             } else if (TypedCode == CorrectCode[1])
             {
-                //this.gameObject.GetComponent<scaleScript>();
+                scale = true;
+                
             } else if (TypedCode == CorrectCode[2] || TypedCode == CorrectCode[3] || TypedCode == CorrectCode[4])
             {
                 //transform script
@@ -56,5 +60,10 @@ public GameObject RelevantInputField;
                 //boolean ability script??
             }
         }
+    }
+
+    public bool GetScale()
+    {
+        return scale;
     }
 }

@@ -11,26 +11,32 @@ public class scaleScript : MonoBehaviour {
     float scaleSize = 1;
 
     CommandScript getAnimal;
-
+    GeneralCodeToggle activate;
     // Use this for initialization
-    void Start () {
+     void Start() {
 
         getAnimal = this.gameObject.GetComponent<CommandScript>();
+        activate = this.gameObject.GetComponent<GeneralCodeToggle>();
         SelectedInput.onEndEdit.AddListener(delegate {
-            float size = float.Parse(SelectedInput.text);
+            if (activate.GetScale())
+            {
+                float size = float.Parse(SelectedInput.text);
 
-            UpdateScale(size); });
+                UpdateScale(size);
+            }
+        });
 
 	}
 	
 	// Update is called once per frame
-	void UpdateScale (float a) {
+	 void UpdateScale (float a) {
 
+        
         float b = (a - scaleSize) * 2;
 
         scaleSize = a;
         getAnimal.GetAnimal().transform.localScale += new Vector3(b, b, b);
 
-
+        
 	}
 }

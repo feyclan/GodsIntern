@@ -1762,7 +1762,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ad2a2342ecdd994fae4eece9ded0511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectedObject: {fileID: 393023687}
   SelectedInput: {fileID: 0}
 --- !u!114 &1727483170
 MonoBehaviour:
@@ -1895,8 +1894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ad2a2342ecdd994fae4eece9ded0511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectedObject: {fileID: 0}
-  SelectedInput: {fileID: 0}
+  SelectedInput: {fileID: 923560973}
 --- !u!1 &2030310184
 GameObject:
   m_ObjectHideFlags: 0
