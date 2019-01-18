@@ -7,20 +7,16 @@ public class SetScale : MonoBehaviour {
 
 public GameObject SelectedObject;
 public InputField SelectedInputField;
-float PreferredScale = 1;
+float scale;
 
 void Start(){
-	SelectedInputField.onEndEdit.AddListener(delegate {ChangeScale(PreferredScale); });
-}
-
-void Update()
-{
-	PreferredScale = float.Parse(SelectedInputField.text);
+	SelectedInputField.onEndEdit.AddListener(delegate {
+		scale = float.Parse(SelectedInputField.text); 
+		ChangeScale(); 
+		});
 	}
-
 	
-void ChangeScale(float scale)
-{
-SelectedObject.transform.localScale *= scale;
-}
+void ChangeScale(){
+	SelectedObject.transform.localScale *= scale;
+	}
 }

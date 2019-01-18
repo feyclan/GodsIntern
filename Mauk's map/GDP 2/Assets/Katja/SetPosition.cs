@@ -8,15 +8,17 @@ public GameObject SelectedObject;
 public InputField XposInputField;
 public InputField YposInputField;
 public InputField ZposInputField;
+public float speed;
 float Xpos = 0;
 float Ypos = 0;
 float Zpos = 0;
-int Xi;
-int Yi;
-int Zi;
+float Xi;
+float Yi;
+float Zi;
 Vector3 a;
 
 	void Start () {
+		
 		XposInputField.onEndEdit.AddListener(delegate {
 			Xi = 1; 
 			Xpos = float.Parse(XposInputField.text);
@@ -35,11 +37,11 @@ Vector3 a;
 	void Update () {
 		
         a = SelectedObject.transform.localPosition;
-		
 		//Xposition
 		if(Xi>0 && Xi < Mathf.Abs(Xpos)){
-			SelectedObject.transform.localPosition = new Vector3(a.x + (Xpos/Mathf.Abs(Xpos)),a.y, a.z);
-			Xi++;
+			SelectedObject.transform.localPosition = new Vector3(a.x + (Xpos/Mathf.Abs(Xpos))*speed,a.y, a.z);
+			SelectedObject.transform.LookAt(new Vector3(a.x + (-Xpos/Mathf.Abs(Xpos)),a.y, a.z)); // change looking direction
+			Xi += 1*speed;
 		}
 		else{
 			Xi = 0;
@@ -47,8 +49,9 @@ Vector3 a;
 		
 		//Yposition
 		if(Yi>0 && Yi < Mathf.Abs(Ypos)){
-			SelectedObject.transform.localPosition = new Vector3(a.x, a.y + (Ypos/Mathf.Abs(Ypos)), a.z);
-			Yi++;
+			SelectedObject.transform.localPosition = new Vector3(a.x, a.y + (Ypos/Mathf.Abs(Ypos))*speed, a.z);
+			SelectedObject.transform.LookAt(new Vector3(a.x, a.y + (-Ypos/Mathf.Abs(Ypos)), a.z));
+			Yi += 1*speed;
 		}
 		else{
 			Yi = 0;
@@ -56,11 +59,13 @@ Vector3 a;
 		
 		//Zposition
 		if(Zi>0 && Zi < Mathf.Abs(Zpos)){
-			SelectedObject.transform.localPosition = new Vector3(a.x, a.y, a.z + (Zpos/Mathf.Abs(Zpos)));
-			Zi++;
+			SelectedObject.transform.localPosition = new Vector3(a.x, a.y, a.z + (Zpos/Mathf.Abs(Zpos))*speed);
+			SelectedObject.transform.LookAt(new Vector3(a.x, a.y, a.z + (-Zpos/Mathf.Abs(Zpos))));
+			Zi += 1*speed;
 		}
 		else{
 			Zi = 0;
 		}
+		
 	}
 }

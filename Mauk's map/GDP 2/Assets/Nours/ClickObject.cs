@@ -28,8 +28,8 @@ public class ClickObject : MonoBehaviour {
         MoveField(); //inputfield is moved next to animal
 
         GameObject commandInput = GameObject.Find("CommandObject"); //the gamecomponent with all the setcolors, etc...
-        CommandScript cScript = commandInput.GetComponent<CommandScript>(); //get the script from said gamecomponent
-        cScript.Tester();
+    //    CommandScript cScript = commandInput.GetComponent<CommandScript>(); //get the script from said gamecomponent
+     //   cScript.Tester();
 
     }
 

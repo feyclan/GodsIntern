@@ -23,9 +23,9 @@ void Start(){
 
 void ChangeColor(Color chosencolor){
 		//Fetch the Renderer from the GameObject
-        Renderer rend = SelectedObject.GetComponent<Renderer>();
+        Renderer[] rend = SelectedObject.GetComponentsInChildren<Renderer>();
         //Set the main Color of the Material to blue
-        rend.material.color = chosencolor;
+        rend[0].material.color = chosencolor;
 	}
 
 }
