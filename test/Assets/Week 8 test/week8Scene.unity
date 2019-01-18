@@ -1814,7 +1814,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedInputField: {fileID: 0}
-  CorrectCode: []
   RelevantInputField: {fileID: 0}
 --- !u!4 &1727483172
 Transform:
@@ -1839,6 +1838,7 @@ GameObject:
   - component: {fileID: 1807710467}
   - component: {fileID: 1807710466}
   - component: {fileID: 1807710468}
+  - component: {fileID: 1807710469}
   m_Layer: 0
   m_Name: CommandObject
   m_TagString: Untagged
@@ -1883,13 +1883,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedInputField: {fileID: 1515035960}
-  CorrectCode:
-  - SetColor
-  - SetScale
-  - transform.x
-  - transform.y
-  - transform.z
   RelevantInputField: {fileID: 923560971}
+--- !u!114 &1807710469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1807710465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad2a2342ecdd994fae4eece9ded0511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelectedObject: {fileID: 0}
+  SelectedInput: {fileID: 0}
 --- !u!1 &2030310184
 GameObject:
   m_ObjectHideFlags: 0

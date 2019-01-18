@@ -7,15 +7,15 @@ using UnityEngine.UI;
 public class scaleScript : MonoBehaviour {
 
 
-    public GameObject SelectedObject;
     public InputField SelectedInput;
     float scaleSize = 1;
+
+    CommandScript getAnimal;
 
     // Use this for initialization
     void Start () {
 
-        
-
+        getAnimal = this.gameObject.GetComponent<CommandScript>();
         SelectedInput.onEndEdit.AddListener(delegate {
             float size = float.Parse(SelectedInput.text);
 
@@ -29,7 +29,7 @@ public class scaleScript : MonoBehaviour {
         float b = (a - scaleSize) * 2;
 
         scaleSize = a;
-        SelectedObject.transform.localScale += new Vector3(b, b, b);
+        getAnimal.GetAnimal().transform.localScale += new Vector3(b, b, b);
 
 
 	}
