@@ -6,18 +6,21 @@ using UnityEngine.UI;
 public class SetColor : MonoBehaviour {
 
 public GameObject SelectedObject;
+public GameObject GameObjectInput;
 public InputField SelectedInputField;
 public string[] colorcodes;
 public Color[] colors;
 
 void Start(){
+	SelectedInputField = GameObjectInput.GetComponent<InputField>();
 	SelectedInputField.onEndEdit.AddListener(delegate {
 		string ColorPreference = SelectedInputField.text;
-	for (int i = 0; i < colorcodes.Length; i++){
-	if(ColorPreference == colorcodes[i]){
-		ChangeColor(colors[i]);
-		}
-	}
+		for (int i = 0; i < colorcodes.Length; i++){
+			if(ColorPreference == colorcodes[i]){
+				ChangeColor(colors[i]);
+				}
+			}
+		GameObjectInput.SetActive(false);
 		});
 }
 

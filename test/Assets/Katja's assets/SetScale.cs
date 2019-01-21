@@ -6,12 +6,16 @@ using UnityEngine.UI;
 public class SetScale : MonoBehaviour {
 
 public GameObject SelectedObject;
-public InputField SelectedInputField;
+public GameObject GameObjectInput;
 public float scale;
 
 void Start(){
+	InputField SelectedInputField = GameObjectInput.GetComponent<InputField>();
 	SelectedInputField.onEndEdit.AddListener(delegate {
-		ChangeScale(); 
+		//ChangeScale(); 
+		scale = float.Parse(SelectedInputField.text); 
+		SelectedObject.transform.localScale *= scale;
+		GameObjectInput.SetActive(false);
 		});
 	}
 	

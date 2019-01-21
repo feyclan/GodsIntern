@@ -6127,7 +6127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &785843036
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12415,7 +12415,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedObject: {fileID: 1795718316}
-  SelectedInputField: {fileID: 944955322}
+  GameObjectInput: {fileID: 944955320}
+  scale: 0
+  SelectedInputField: {fileID: 0}
 --- !u!114 &1627034743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12428,9 +12430,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedObject: {fileID: 1795718316}
-  XposInputField: {fileID: 1189236792}
-  YposInputField: {fileID: 330168889}
-  ZposInputField: {fileID: 30134149}
+  XposGameObject: {fileID: 1189236790}
+  YposGameObject: {fileID: 330168887}
+  ZposGameObject: {fileID: 30134147}
   speed: 0.1
 --- !u!114 &1627034744
 MonoBehaviour:
@@ -12444,7 +12446,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedObject: {fileID: 1795718316}
-  SelectedInputField: {fileID: 785843037}
+  GameObjectInput: {fileID: 785843035}
+  SelectedInputField: {fileID: 0}
   colorcodes:
   - blue
   colors:
@@ -12465,10 +12468,12 @@ MonoBehaviour:
   - SetColor
   - SetScale
   - RestartLevel
+  - transform.x
   RelevantInputField:
   - {fileID: 785843035}
   - {fileID: 944955320}
   - {fileID: 792670356}
+  - {fileID: 1189236790}
 --- !u!4 &1627034746
 Transform:
   m_ObjectHideFlags: 0
