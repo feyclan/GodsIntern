@@ -403,7 +403,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &30134148
 RectTransform:
   m_ObjectHideFlags: 0
@@ -898,6 +898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 82362818}
   - component: {fileID: 82362817}
+  - component: {fileID: 82362819}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Untagged
@@ -940,6 +941,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &82362819
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 82362816}
+  serializedVersion: 2
+  m_Mass: 20
+  m_Drag: 1000
+  m_AngularDrag: 1000
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &88721137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4766054471365538, guid: 729e667a67b1fbd40adbda716ae59a2e,
@@ -2233,7 +2249,6 @@ GameObject:
   - component: {fileID: 229023887}
   - component: {fileID: 229023888}
   - component: {fileID: 229023890}
-  - component: {fileID: 229023889}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -2314,21 +2329,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0052049244, y: 0.0136491, z: 0.0044590104}
     m_Extent: {x: 0.03183033, y: 0.029161347, z: 0.018742772}
   m_DirtyAABB: 0
---- !u!54 &229023889
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 229023886}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!64 &229023890
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2339,7 +2339,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 66a230cfe1d37824fb2f62122d7701cd, type: 3}
@@ -4744,7 +4744,6 @@ GameObject:
   m_Component:
   - component: {fileID: 515344136}
   - component: {fileID: 515344137}
-  - component: {fileID: 515344139}
   - component: {fileID: 515344138}
   m_Layer: 0
   m_Name: Cube
@@ -4832,25 +4831,10 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: c6d4a0c240be402498c6175cf12a1b7e, type: 3}
---- !u!54 &515344139
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 515344135}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!4 &517680977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4412714568244462, guid: 2ab833ef86401f8409c0310ffb61631e,
@@ -5181,7 +5165,7 @@ GameObject:
   - component: {fileID: 615078633}
   - component: {fileID: 615078632}
   m_Layer: 0
-  m_Name: Red Fox
+  m_Name: Red Fox Rotated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5214,13 +5198,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 615078631}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 43.8, y: 5.2, z: 32.9}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 192599334}
   - {fileID: 1735610946}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1795718317}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &619085387 stripped
 GameObject:
@@ -6143,7 +6127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &785843036
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6319,6 +6303,46 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ddaf242dd01c744393cf9bd8a9334d1, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &792670356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 792670358}
+  - component: {fileID: 792670357}
+  m_Layer: 0
+  m_Name: RestartLevel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &792670357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 792670356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0af3f4262829c042920899e543ed8c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &792670358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 792670356}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 39.235092, y: 6.2491946, z: 30.06631}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &797187330 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4448730430786274, guid: 1ddaf242dd01c744393cf9bd8a9334d1,
@@ -10658,6 +10682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1350746854}
   - component: {fileID: 1350746853}
+  - component: {fileID: 1350746855}
   m_Layer: 0
   m_Name: bird
   m_TagString: Untagged
@@ -10700,6 +10725,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1350746855
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1350746852}
+  serializedVersion: 2
+  m_Mass: 20
+  m_Drag: 1000
+  m_AngularDrag: 1000
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1352676268 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: dac1f6a026468af46b8928893e3eea27,
@@ -12374,7 +12414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 504492029ee6a204d8354d7124418327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectedObject: {fileID: 615078631}
+  SelectedObject: {fileID: 1795718316}
   SelectedInputField: {fileID: 944955322}
 --- !u!114 &1627034743
 MonoBehaviour:
@@ -12387,7 +12427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100fc441013407c469cf9e2a66819475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectedObject: {fileID: 615078631}
+  SelectedObject: {fileID: 1795718316}
   XposInputField: {fileID: 1189236792}
   YposInputField: {fileID: 330168889}
   ZposInputField: {fileID: 30134149}
@@ -12403,7 +12443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091f1cc8b973ca14fb7f8e564c9ae084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SelectedObject: {fileID: 615078631}
+  SelectedObject: {fileID: 1795718316}
   SelectedInputField: {fileID: 785843037}
   colorcodes:
   - blue
@@ -12424,9 +12464,11 @@ MonoBehaviour:
   CorrectCode:
   - SetColor
   - SetScale
+  - RestartLevel
   RelevantInputField:
   - {fileID: 785843035}
   - {fileID: 944955320}
+  - {fileID: 792670356}
 --- !u!4 &1627034746
 Transform:
   m_ObjectHideFlags: 0
@@ -13692,7 +13734,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1735610946}
   - component: {fileID: 1735610947}
-  - component: {fileID: 1735610949}
   - component: {fileID: 1735610950}
   - component: {fileID: 1735610948}
   m_Layer: 0
@@ -13792,25 +13833,10 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 4f35a00946e49a64681bfd1e41fdb7a2, type: 3}
---- !u!54 &1735610949
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1735610945}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &1735610950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14500,6 +14526,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4908549075520174, guid: 736a3a898da8f894593c271ad73d5f1f,
     type: 2}
   m_PrefabInternal: {fileID: 1093017987}
+--- !u!1 &1795718316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1795718317}
+  - component: {fileID: 1795718318}
+  m_Layer: 0
+  m_Name: Red Fox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1795718317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1795718316}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 43.8, y: 9.39, z: 32.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 615078633}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1795718318
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1795718316}
+  serializedVersion: 2
+  m_Mass: 50
+  m_Drag: 5
+  m_AngularDrag: 5
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1806455473 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1045710228479616, guid: 8d102e899c856934a9f58af9c7508d59,

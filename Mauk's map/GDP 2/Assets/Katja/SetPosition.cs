@@ -40,7 +40,7 @@ Vector3 a;
 		//Xposition
 		if(Xi>0 && Xi < Mathf.Abs(Xpos)){
 			SelectedObject.transform.localPosition = new Vector3(a.x + (Xpos/Mathf.Abs(Xpos))*speed,a.y, a.z);
-			SelectedObject.transform.LookAt(new Vector3(a.x + (-Xpos/Mathf.Abs(Xpos)),a.y, a.z)); // change looking direction
+			SelectedObject.transform.LookAt(new Vector3(a.x + (Xpos/Mathf.Abs(Xpos)),a.y, a.z)); // change looking direction
 			Xi += 1*speed;
 		}
 		else{
@@ -50,7 +50,7 @@ Vector3 a;
 		//Yposition
 		if(Yi>0 && Yi < Mathf.Abs(Ypos)){
 			SelectedObject.transform.localPosition = new Vector3(a.x, a.y + (Ypos/Mathf.Abs(Ypos))*speed, a.z);
-			SelectedObject.transform.LookAt(new Vector3(a.x, a.y + (-Ypos/Mathf.Abs(Ypos)), a.z));
+			//SelectedObject.transform.LookAt(new Vector3(a.x, a.y + (Ypos/Mathf.Abs(Ypos)), a.z));
 			Yi += 1*speed;
 		}
 		else{
@@ -60,7 +60,7 @@ Vector3 a;
 		//Zposition
 		if(Zi>0 && Zi < Mathf.Abs(Zpos)){
 			SelectedObject.transform.localPosition = new Vector3(a.x, a.y, a.z + (Zpos/Mathf.Abs(Zpos))*speed);
-			SelectedObject.transform.LookAt(new Vector3(a.x, a.y, a.z + (-Zpos/Mathf.Abs(Zpos))));
+			SelectedObject.transform.LookAt(new Vector3(a.x, a.y, a.z + (Zpos/Mathf.Abs(Zpos))));
 			Zi += 1*speed;
 		}
 		else{
