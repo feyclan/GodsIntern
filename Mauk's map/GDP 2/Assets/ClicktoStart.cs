@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript1 : MonoBehaviour {
+public class ClicktoStart : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -14,9 +14,7 @@ public class NewBehaviourScript1 : MonoBehaviour {
 	void Update () {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Pressed primary button.");
             SceneManager.LoadScene("Game");
-            SceneManager.UnloadSceneAsync("New Scene");
         }
     }
 }
