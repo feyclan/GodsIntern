@@ -8,6 +8,7 @@ public class SetColor : MonoBehaviour {
 public InputField SelectedInputField;
 public string[] colorcodes;
 public Color[] colors;
+public bool Achievement2Completed = false;
 
  CommandScript getAnimal;
  GeneralCodeToggle activate;
@@ -27,6 +28,9 @@ void Start(){
                 {
                     valid = true;
                     ChangeColor(colors[i]);
+					if(getAnimal.GetAnimal().tag == "Fish"){ //For the achievements
+					Achievement2Completed = true;
+					}
                 }
             }
             
