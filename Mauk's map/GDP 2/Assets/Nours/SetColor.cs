@@ -32,6 +32,7 @@ void Start(){
             
             if (!valid)
             {
+                activate.ToggleInputField(false);
                 Debug.Log("dbgn");
             }
         }
