@@ -30,9 +30,6 @@ public class shaderteest : MonoBehaviour
         //Fetch the Renderer from the GameObject
         Renderer rend = SelectedObject.GetComponent<Renderer>();
         Shader shader1 = Shader.Find("Standard");
-        //Set the main Color of the Material to blue
-        //rend.material.SetPass(2);
-        //rend.material.color = chosencolor;
         rend.material.shader = shader1;
         rend.material.SetColor("_Color", chosencolor);
 

@@ -10,6 +10,7 @@ string[] CorrectCode;
 public GameObject RelevantInputField;
 
     bool scale; //to activate scalescript
+    bool color;
     string TypedCode;
 
 	void Start(){
@@ -22,6 +23,7 @@ public GameObject RelevantInputField;
 	
 	void ReadCode(){
         scale = false;
+        color = false;
         TypedCode = SelectedInputField.text;
         bool validCode = false;
 		for (int i = 0; i < CorrectCode.Length; i++){
@@ -47,7 +49,7 @@ public GameObject RelevantInputField;
             Vector3 a = SelectedInputField.transform.localPosition;
             RelevantInputField.transform.localPosition = new Vector3(a.x + 160, a.y, a.x);
             if (TypedCode == CorrectCode[0]) {
-                //naar setColor script
+                color = true;
             } else if (TypedCode == CorrectCode[1])
             {
                 scale = true;
@@ -65,5 +67,10 @@ public GameObject RelevantInputField;
     public bool GetScale()
     {
         return scale;
+    }
+
+    public bool GetColor()
+    {
+        return color;
     }
 }
