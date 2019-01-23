@@ -9,7 +9,6 @@ public InputField SelectedInputField;
 string[] CorrectCode;
 public GameObject RelevantInputField;
 
-    public GameObject button;
 
     bool scale; //to activate scalescript
     bool color;
@@ -42,7 +41,7 @@ public GameObject RelevantInputField;
         {
 
             Debug.Log("disaster"); //!! has to change into ingame error
-            button.SetActive(true);
+            //button.SetActive(true);
 
             ToggleInputField(false);
         } 
