@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GeneralCodeToggle : MonoBehaviour {
+public class GeneralCodeToggle2 : MonoBehaviour {
 
 public InputField SelectedInputField;
 public string[] CorrectCode;

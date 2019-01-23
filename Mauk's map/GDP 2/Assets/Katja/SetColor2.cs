@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SetColor : MonoBehaviour {
+public class SetColor2 : MonoBehaviour {
 
 public GameObject SelectedObject;
 public GameObject GameObjectInput;

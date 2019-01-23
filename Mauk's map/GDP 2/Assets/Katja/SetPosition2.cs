@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SetPosition : MonoBehaviour {
+public class SetPosition2 : MonoBehaviour {
 public GameObject SelectedObject;
 //public InputField XposInputField;			these are not necessary anymore
 //public InputField YposInputField;
