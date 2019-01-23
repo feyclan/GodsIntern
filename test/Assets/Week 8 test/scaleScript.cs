@@ -20,6 +20,8 @@ public class scaleScript : MonoBehaviour {
         SelectedInput.onEndEdit.AddListener(delegate {
             if (activate.GetScale())
             {
+                //ERROR VOOR ALS JE GEEN NUMMERS ERIN DOET ENALLSES
+
                 float size = float.Parse(SelectedInput.text);
 
                 UpdateScale(size);

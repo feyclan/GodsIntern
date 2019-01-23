@@ -9,9 +9,13 @@ public InputField SelectedInputField;
 string[] CorrectCode;
 public GameObject RelevantInputField;
 
+    public GameObject button;
+
     bool scale; //to activate scalescript
     bool color;
+    bool pos;
     string TypedCode;
+    string position;
 
 	void Start(){
 
@@ -24,6 +28,7 @@ public GameObject RelevantInputField;
 	void ReadCode(){
         scale = false;
         color = false;
+        pos = false;
         TypedCode = SelectedInputField.text;
         bool validCode = false;
 		for (int i = 0; i < CorrectCode.Length; i++){
@@ -37,6 +42,8 @@ public GameObject RelevantInputField;
         {
 
             Debug.Log("disaster"); //!! has to change into ingame error
+            button.SetActive(true);
+
             ToggleInputField(false);
         } 
         
@@ -56,6 +63,8 @@ public GameObject RelevantInputField;
                 
             } else if (TypedCode == CorrectCode[2] || TypedCode == CorrectCode[3] || TypedCode == CorrectCode[4])
             {
+                position = TypedCode;
+                pos = true;
                 //transform script
             } else
             {
@@ -72,5 +81,15 @@ public GameObject RelevantInputField;
     public bool GetColor()
     {
         return color;
+    }
+
+    public bool GetPos()
+    {
+        return pos;
+    }
+
+    public string GetAxis()
+    {
+        return position;
     }
 }
