@@ -3,9 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript1  {
+public class HomeScreen  : MonoBehaviour {
 
-    public void NewGameBtn(string newGameLevel) {
-        SceneManager.LoadScene(newGameLevel);
+    private void OnMouseDown()
+    {
+        SceneManager.LoadScene("Game");
     }
+
+
+
+ //   void OnMouseUp()
+ //   {
+//        Debug.Log("hoi");
+//               SceneManager.LoadScene("Game");
+ //       // SceneManager.LoadScene.LoadSceneMode.Single("Game");
+//        SceneManager.UnloadSceneAsync("New Scene");
+ //   }
 }
