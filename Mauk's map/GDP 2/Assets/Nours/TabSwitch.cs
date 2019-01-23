@@ -6,6 +6,8 @@ public class TabSwitch : MonoBehaviour {
 
     public GameObject[] animals;
     
+
+
     // Use this for initialization
 	void Start () {
 		
