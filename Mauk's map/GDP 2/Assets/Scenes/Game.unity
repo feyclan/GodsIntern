@@ -4695,7 +4695,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d44107065bf8ca4d87dd87acbb8b499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animals: []
+  animals:
+  - {fileID: 1795718316}
+  - {fileID: 82362816}
+  - {fileID: 1350746852}
+  commandInput: {fileID: 1089743945}
 --- !u!1 &391052884 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1752188049916452, guid: c33d23e7dff87c94bbbf8303e2318397,

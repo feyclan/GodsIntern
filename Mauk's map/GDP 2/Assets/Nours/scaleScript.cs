@@ -34,7 +34,7 @@ public class scaleScript : MonoBehaviour {
 	 void UpdateScale (float a) {
 
         
-        float b = (a - scaleSize) * 2;
+        float b = (a - scaleSize) * 1;
 
         scaleSize = a;
         getAnimal.GetAnimal().transform.localScale += new Vector3(b, b, b);
