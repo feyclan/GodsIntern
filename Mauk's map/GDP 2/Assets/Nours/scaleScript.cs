@@ -10,18 +10,25 @@ public class scaleScript : MonoBehaviour {
     public InputField SelectedInput;
     float scaleSize = 1;
 
+    int[] numbers;
+    float g;
+
+    public GameObject error;
     CommandScript getAnimal;
     GeneralCodeToggle activate;
     // Use this for initialization
      void Start() {
-
         getAnimal = this.gameObject.GetComponent<CommandScript>();
         activate = this.gameObject.GetComponent<GeneralCodeToggle>();
         SelectedInput.onEndEdit.AddListener(delegate {
             if (activate.GetScale())
             {
                 //ERROR VOOR ALS JE GEEN NUMMERS ERIN DOET ENALLSES
-
+                if (!float.TryParse(SelectedInput.text, out g))
+                {
+                    error.SetActive(true);
+                    activate.ToggleInputField(false);
+                }
                 float size = float.Parse(SelectedInput.text);
 
                 UpdateScale(size);
@@ -34,7 +41,7 @@ public class scaleScript : MonoBehaviour {
 	 void UpdateScale (float a) {
 
         
-        float b = (a - scaleSize) * 2;
+        float b = (a - scaleSize) * 1;
 
         scaleSize = a;
         getAnimal.GetAnimal().transform.localScale += new Vector3(b, b, b);

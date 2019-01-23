@@ -17,7 +17,10 @@ Vector3 a;
     CommandScript getAnimal;
     GeneralCodeToggle activate;
 
+    public GameObject error;
     GameObject SelectedObject = null;
+
+    float g;
 
 	void Start () {
 
@@ -30,6 +33,11 @@ Vector3 a;
         {
             if (activate.GetPos())
             {
+                if (!float.TryParse(SelectedInput.text, out g))
+                {
+                    error.SetActive(true);
+                    activate.ToggleInputField(false);
+                }
 
 
                 float coord = float.Parse(SelectedInput.text);

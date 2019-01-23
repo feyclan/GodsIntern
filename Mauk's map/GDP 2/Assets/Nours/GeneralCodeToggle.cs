@@ -8,7 +8,8 @@ public class GeneralCodeToggle : MonoBehaviour {
 public InputField SelectedInputField;
 string[] CorrectCode;
 public GameObject RelevantInputField;
-
+    public GameObject error;
+    public GameObject restart;
 
     bool scale; //to activate scalescript
     bool color;
@@ -18,7 +19,7 @@ public GameObject RelevantInputField;
 
 	void Start(){
 
-        CorrectCode = new string[] {"SetColor", "SetScale", "transform.x", "transform.y", "transform.z", "AbilityFly", "AbilitySwim", "AbilityWalk"};
+        CorrectCode = new string[] {"SetColor", "SetScale", "transform.x", "transform.y", "transform.z", "RestartLevel"};
 	SelectedInputField.onEndEdit.AddListener(delegate {
 		ReadCode(); 
 		});
@@ -42,7 +43,7 @@ public GameObject RelevantInputField;
 
             Debug.Log("disaster"); //!! has to change into ingame error
             //button.SetActive(true);
-
+            error.SetActive(true);
             ToggleInputField(false);
         } 
         
@@ -50,6 +51,7 @@ public GameObject RelevantInputField;
 	
 	public void ToggleInputField(bool i){
 		RelevantInputField.SetActive(i);
+
         if (i)
         {
             Vector3 a = SelectedInputField.transform.localPosition;
@@ -67,7 +69,7 @@ public GameObject RelevantInputField;
                 //transform script
             } else
             {
-                //boolean ability script??
+                restart.SetActive(true);
             }
         }
     }

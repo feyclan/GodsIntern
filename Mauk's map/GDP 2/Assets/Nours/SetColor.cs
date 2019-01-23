@@ -10,8 +10,12 @@ public string[] colorcodes;
 public Color[] colors;
 public bool Achievement2Completed = false;
 
+
+
  CommandScript getAnimal;
  GeneralCodeToggle activate;
+
+    public GameObject error;
 
 void Start(){
 
@@ -37,13 +41,20 @@ void Start(){
             if (!valid)
             {
                 activate.ToggleInputField(false);
-                Debug.Log("dbgn");
+                error.SetActive(true);
+
+
+                //Debug.Log("dbgn");
             }
         }
     });
 }
 
-void ChangeColor(Color chosencolor){
+    private void Update()
+    {
+    }
+
+    void ChangeColor(Color chosencolor){
 		//Fetch the Renderer from the GameObject
         Renderer[] rend = getAnimal.GetAnimal().GetComponentsInChildren<Renderer>();
         //Set the main Color of the Material to blue
