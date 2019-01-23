@@ -1,0 +1,107 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class SetPosition : MonoBehaviour {
+public InputField SelectedInput;
+public float speed;
+float Xpos = 0;
+float Ypos = 0;
+float Zpos = 0;
+float Xi;
+float Yi;
+float Zi;
+Vector3 a;
+
+    CommandScript getAnimal;
+    GeneralCodeToggle activate;
+
+    GameObject SelectedObject = null;
+
+	void Start () {
+
+
+        getAnimal = this.gameObject.GetComponent<CommandScript>();
+        activate = this.gameObject.GetComponent<GeneralCodeToggle>();
+
+
+        SelectedInput.onEndEdit.AddListener(delegate
+        {
+            if (activate.GetPos())
+            {
+
+
+                float coord = float.Parse(SelectedInput.text);
+
+                SelectedObject = getAnimal.GetAnimal();
+
+                if (activate.GetAxis() == "transform.x")
+                {
+                    Xi = 1;
+                    Xpos = coord;
+                } else if(activate.GetAxis() == "transform.y")
+                {
+                    Yi = 1;
+                    Ypos = coord;
+                } else
+                {
+                    Zi = 1;
+                    Zpos = coord;
+                }
+            }
+        });
+
+        /*
+		XposInputField.onEndEdit.AddListener(delegate {
+			Xi = 1; 
+			Xpos = float.Parse(XposInputField.text);
+			XposGameObject.SetActive(false);
+		});
+		YposInputField.onEndEdit.AddListener(delegate {
+			Yi = 1;
+			Ypos = float.Parse(YposInputField.text);
+			YposGameObject.SetActive(false);
+		});
+		ZposInputField.onEndEdit.AddListener(delegate {
+			Zi = 1;
+			Zpos = float.Parse(ZposInputField.text);
+			ZposGameObject.SetActive(false);
+		});*/
+	}
+	
+	void Update () {
+		
+        a = SelectedObject.transform.localPosition;
+		//Xposition
+		if(Xi>0 && Xi < Mathf.Abs(Xpos)){
+			SelectedObject.transform.localPosition = new Vector3(a.x + (Xpos/Mathf.Abs(Xpos))*speed,a.y, a.z);
+			SelectedObject.transform.LookAt(new Vector3(a.x + (Xpos/Mathf.Abs(Xpos)),a.y, a.z)); // change looking direction
+			Xi += 1*speed;
+		}
+		else{
+			Xi = 0;
+		}
+		
+		//Yposition
+		if(Yi>0 && Yi < Mathf.Abs(Ypos)){
+			SelectedObject.transform.localPosition = new Vector3(a.x, a.y + (Ypos/Mathf.Abs(Ypos))*speed, a.z);
+			//SelectedObject.transform.LookAt(new Vector3(a.x, a.y + (Ypos/Mathf.Abs(Ypos)), a.z));
+			Yi += 1*speed;
+		}
+		else{
+			Yi = 0;
+		}
+		
+		//Zposition
+		if(Zi>0 && Zi < Mathf.Abs(Zpos)){
+			SelectedObject.transform.localPosition = new Vector3(a.x, a.y, a.z + (Zpos/Mathf.Abs(Zpos))*speed);
+			SelectedObject.transform.LookAt(new Vector3(a.x, a.y, a.z + (Zpos/Mathf.Abs(Zpos))));
+			Zi += 1*speed;
+		}
+		else{
+			Zi = 0;
+		}
+		
+	}
+}
