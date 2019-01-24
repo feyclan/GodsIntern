@@ -55,7 +55,7 @@ public GameObject RelevantInputField;
         if (i)
         {
             Vector3 a = SelectedInputField.transform.localPosition;
-            RelevantInputField.transform.localPosition = new Vector3(a.x + 160, a.y, a.x);
+            RelevantInputField.transform.localPosition = new Vector3(a.x + 320, a.y, 0);
             if (TypedCode == CorrectCode[0]) {
                 color = true;
             } else if (TypedCode == CorrectCode[1])
