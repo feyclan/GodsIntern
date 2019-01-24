@@ -19,7 +19,7 @@ public GameObject RelevantInputField;
 
 	void Start(){
 
-        CorrectCode = new string[] {"SetColor", "SetScale", "transform.x", "transform.y", "transform.z", "RestartLevel"};
+        CorrectCode = new string[] {"SetColor", "SetScale", "transform.x", "transform.y", "transform.z", "RestartLevel", "exit"};
 	SelectedInputField.onEndEdit.AddListener(delegate {
 		ReadCode(); 
 		});
@@ -67,9 +67,12 @@ public GameObject RelevantInputField;
                 position = TypedCode;
                 pos = true;
                 //transform script
-            } else
+            } else if (TypedCode == CorrectCode[5])
             {
                 restart.SetActive(true);
+            } else
+            {
+                //SCRIPT VOOR EXIT
             }
         }
     }
