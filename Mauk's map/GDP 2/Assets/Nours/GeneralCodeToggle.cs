@@ -72,7 +72,8 @@ public GameObject RelevantInputField;
                 restart.SetActive(true);
             } else
             {
-                //SCRIPT VOOR EXIT
+                Debug.Log("quit");
+                Application.Quit();
             }
         }
     }
